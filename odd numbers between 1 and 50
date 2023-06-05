@@ -1,0 +1,52 @@
+# printing odd numbers from 1 to 50 in diverse methods
+
+print("Odd numbers between 1 and 50 are")
+
+# solution 1 using range()
+for i in range(1,50,2):
+    print(i,end = " ")
+print()
+ 
+# solution 2 using for loop
+for i in range(1,50):
+    if (i%2!=0): 
+        print(i,end = " ")
+print()
+
+# solution 3 using while loop
+i=1
+while(i<=50):
+    if (i%2!=0):    
+        print(i,end = " ")
+    i+=1
+print()
+
+# solution 4 using function
+def oddno(n):
+    for i in range(1,n,2):
+        print(i,end = " ")
+
+nr = int(input("enter the number "))
+oddno(nr)
+
+# solution 5 using list
+def oddno(n):
+    lst = []
+    for i in range(1,n,2):
+        lst.append(i)
+    return lst
+nr = int(input("enter the number "))
+print("Odd Nos are",oddno(nr))
+
+
+# solution 6 using list but without comma
+def oddno(n):
+    lst = []
+    for i in range(1,n,2):
+        lst.append(i)
+    return lst
+nr = int(input("enter the number "))
+lst4 = map(str, oddno(nr))
+print("Odd Nos are",' '.join(lst4))
+
+
