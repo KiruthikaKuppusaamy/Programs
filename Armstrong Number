@@ -1,0 +1,29 @@
+# Method 1
+n = int(input("Enter the number "))
+strn = str(n)
+lstrn = len(strn)
+sum = 0
+for i in range(0,lstrn):
+    sum = sum + (int(strn[i])**lstrn)
+if (sum==n):
+    print("Armstrong")
+else:
+    print("Not Armstrong")
+
+
+# Method 2
+# seperate the digits
+n = int(input("Enter the number "))
+temp = n
+sum= 0
+while (n>0):
+    dgt = n%10
+    sum = sum + (dgt**4)
+    '''print(dgt)'''
+    n = n//10
+if (sum==temp):
+    print("Armstrong")
+else:
+    print("Not Armstrong")
+
+    
